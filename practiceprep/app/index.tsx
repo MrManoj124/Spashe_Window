@@ -8,17 +8,17 @@ export default function SplashScreen()
   const [step, setStep] = useState(0);
   const screens = [
     {
-      animation:require("D:\Projectss\ReactNative\SplashWindow\Spashe_Window\practiceprep\assets\images\canvas.json"),
+      animation:require("..\assets\images\canvas.json"),
       title:"Lottie based files",
       subtitle:"This is the first screen of the app"
     },
     {
-      animation:require("D:\Projectss\ReactNative\SplashWindow\Spashe_Window\practiceprep\assets\images\lotie.json"),
+      animation:require("..\assets\images\lotie.json"),
       title:"lottie based files",
       subtitle:"This is the second screen of the app"
     },
     {
-      animation:require("D:\Projectss\ReactNative\SplashWindow\Spashe_Window\practiceprep\assets\images\lottief.json"),
+      animation:require("..\assets\images\lottief.json"),
       title:"llm cons",
       subtitle:"This is the third screen of the app"
     },
@@ -32,7 +32,7 @@ export default function SplashScreen()
       else gotoHome();
     },3000);
         return()=>clearTimeout(timer) ;
-  },[step]);
+}, [step]);
 
   const next=()=>step<screens.length-1 ? setStep(step+1) : gotoHome();
   const prev=()=>step>0 && setStep(step-1);
