@@ -8,17 +8,17 @@ export default function SplashScreen()
   const [step, setSetp] = useState(0);
   const screens = [
     {
-      animation:require(),
+      animation:require("D:\Projectss\ReactNative\SplashWindow\Spashe_Window\practiceprep\assets\images\canvas.json"),
       title:"Lottie based files",
       subtitle:"This is the first screen of the app"
     },
     {
-      animation:reqiuire(),
+      animation:require("D:\Projectss\ReactNative\SplashWindow\Spashe_Window\practiceprep\assets\images\lotie.json"),
       title:"lottie based files",
       subtitle:"This is the second screen of the app"
     },
     {
-      animation:require(),
+      animation:require("D:\Projectss\ReactNative\SplashWindow\Spashe_Window\practiceprep\assets\images\lottief.json"),
       title:"llm cons",
       subtitle:"This is the third screen of the app"
     ,
@@ -79,6 +79,6 @@ export default function SplashScreen()
 
 const styles=StyleSheet.create({
   container:{
-    
+
   }
 })
