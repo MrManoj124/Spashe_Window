@@ -79,6 +79,92 @@ export default function SplashScreen()
 
 const styles=StyleSheet.create({
   container:{
+    flex:1,
+    backgroundColor:"#F5F7",
+    alignItems:"center",
+    justifyContent:"center",
+    paddingHorizontal:25,
+  },
+  skipBtn:{
+    position:"absolute",
+    top:50,
+    right:20,
+    backgroundColor:"rgba(0,0,0,0.05)",
+    paddingVertical:6,
+    paddingHorizontal:12,
+    borderRadius:20,
+  },
+  skipText:{
+    fontSize:15,
+    color:"#555",
+    fontWeight:"600",
+  },
+  animation:{
+    width:400,
+    height:400,
+  },
+  title:{
+    fontSize:30,
+    fontWeight:"800",
+    marginTop:20,
+    color:"#111",
+    textAlign:"center",
+    letterSpacing:0.5,
+  },
+  subtitle:{
+    fontSize:18,
+    color:"#6a6a6a",
+    textAlign:"center",
+    paddingHorizontal:25,
+    marginTop:10,
+    lineHeight:22,
+  },
 
-  }
-})
+  pagination:{
+    flexDirection:"row",
+    marginTop:25,
+  },
+  dot:{
+    height:10,
+    borderRadius:10,
+    marginHorizontal:5,
+    backgroundColor:"#D0D3DB",
+  },
+  btnRow:{
+    flexDirection:"row",
+    width:"90%",
+    justifyContent:"space-between",
+    marginTop:40,
+    alignItems:"center",
+
+    shadowColor:"#000",
+    shadowOpacity:0.2,
+    shadowRadius:4,
+    shadowOffset:{width:0, height:2},
+    elevation:4,
+  },
+  navTxt:{
+    color:"#fff",
+    fontSize:20,
+    fontWeight:"700",
+  },
+  getBtn:{
+    backgroundColor:"#000",
+    paddingHorizontal:35,
+    paddingVertical:14,
+    borderRadius:30,
+
+    shadowColor:"#000",
+    shadowOpacity:0.25,
+    shadowRadius:6,
+    shadowOffset:{width:0,height:2},
+    elevation:5,
+  },
+  getTxt:{
+    color:"#fff",
+    fontSize:18,
+    fontWeight:"700",
+    letterSpacing:0.5,
+  },
+
+});
