@@ -8,17 +8,17 @@ export default function SplashScreen()
   const [step, setStep] = useState(0);
   const screens = [
     {
-      animation:require("..\assets\images\canvas.json"),
+      animation:require("..\assets\images\Location Lottie Animation.json"),
       title:"Lottie based files",
       subtitle:"This is the first screen of the app"
     },
     {
-      animation:require("..\assets\images\lotie.json"),
+      animation:require("..\assets\images\Pay Now.json"),
       title:"lottie based files",
       subtitle:"This is the second screen of the app"
     },
     {
-      animation:require("..\assets\images\lottief.json"),
+      animation:require("..\assets\images\Welcome Animation.json"),
       title:"llm cons",
       subtitle:"This is the third screen of the app"
     },
