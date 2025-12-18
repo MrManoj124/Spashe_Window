@@ -1,26 +1,26 @@
-import {router} from "expo-router";
-import Lottie from "lottie-react-native";
-import {useEffect, useState} from "react";
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import { router } from "expo-router";
+import Lottie from "lottie-react";
+import { useEffect, useState } from "react";
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function SplashScreen()
 {
   const [step, setStep] = useState(0);
   const screens = [
     {
-      animation:require("..\assets\images\Location Lottie Animation.json"),
+      animation:require("../assets/images/Location Lottie Animation.json"),
       title:"Lottie based files",
-      subtitle:"This is the first screen of the app"
+      subtitle:"This is the first screen of the app",
     },
     {
-      animation:require("..\assets\images\Pay Now.json"),
+      animation:require("../assets/images/Pay Now.json"),
       title:"lottie based files",
-      subtitle:"This is the second screen of the app"
+      subtitle:"This is the second screen of the app",
     },
     {
-      animation:require("..\assets\images\Welcome Animation.json"),
+      animation:require("../assets/images/Welcome Animation.json"),
       title:"llm cons",
-      subtitle:"This is the third screen of the app"
+      subtitle:"This is the third screen of the app",
     },
   ];
 
@@ -53,10 +53,9 @@ export default function SplashScreen()
         { step >0 ? (
                 <TouchableOpacity style={styles.navBtn} onPress={prev}>
                   <Text style={styles.navTxt}> Previous </Text>
-                </TouchableOpacity>
-                
+                </TouchableOpacity>        
         ):(
-          <View style={{ width:60}}  />
+          <View style={{ width:60}}/>
         )
       };
       
@@ -71,10 +70,7 @@ export default function SplashScreen()
         )}
 
       </View>
-
-
     </View>
-
   )
 }
 
@@ -82,7 +78,7 @@ export default function SplashScreen()
 const styles=StyleSheet.create({
   container:{
     flex:1,
-    backgroundColor:"#F5F7",
+    backgroundColor:"#F5F577",
     alignItems:"center",
     justifyContent:"center",
     paddingHorizontal:25,
@@ -102,8 +98,8 @@ const styles=StyleSheet.create({
     fontWeight:"600",
   },
   animation:{
-    width:400,
-    height:400,
+    width:300,
+    height:300,
   },
   title:{
     fontSize:30,
