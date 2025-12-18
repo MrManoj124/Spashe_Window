@@ -3,14 +3,14 @@ import React from 'react';
 
 export default function Home(){
     return(
-        <View style={StyleSheet.container}>
-            <Text style={StyleSheet.title}>Welcome To Practice React_Native</Text>
-            <Text style={StyleSheet.subtitle}>Open for More Details</Text>
+        <View style={styles.container}>
+            <Text style={styles.title}>Welcome To Practice React_Native</Text>
+            <Text style={styles.subtitle}>Open for More Details</Text>
         </View>
     )
 }
 
-const stytles=StyleSheet.create(
+const styles=StyleSheet.create(
     {
         container:{
             flex:1,
