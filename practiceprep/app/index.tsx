@@ -24,56 +24,61 @@ export default function SplashScreen()
     ,
   ];
 
-  const gotoHome = () =>router.replace("/Home");
+  const gotoHome=()=>router.replace("/Home");
 
   useEffect(()=>{
     const timer=setTimeout(()=>{
-      if(step < screens.length - 1 ) setSetp(step + 1);
-      else.gotoHome();
+      if(step<screens.length-1) setStep(step+1);
+      else gotoHome();
     },3000);
-    return ()=>clearTimeout(timer);
+        return()=>clearTimeout(timer) ;
   },[step]);
 
-  const next()=>step<screens.length - 1 ? setSetp(step+1) : gotoHome();
-  const prev=()=>step>0? && setSetp()step-1);
+  const next=()=>step<screens.length-1 ? setStep(step+1) : gotoHome();
+  const prev=()=>step>0 && setStep(step-1);
 
   return(
-    <View style={styles.container
-      <TouchableOpacity style={styles.skipBtn}>
-        <Text style={styles.skipText}>Skip</Text>
+    <View style={styles.container}>
+
+        <TouchableOpacity style={styles.skipBtn}>
+          <Text style={styles.skipText}> Skip </Text>
         </TouchableOpacity>
 
-        <Lottie animation={screens[step].animation}
-        loop
-        autoPlay
-        style={styles.animation}/>
+      <Lottie animationData={screens[step].animation}
+               loop autoplay style={styles.animation} />
+        <Text style={styles.title}>{screens[step].title} </Text>       
+        <Text style={styles.subtitle}>{screens[step].subtitle} </Text>     
 
-        <Text style={StyleSheet.title}>{screens[step].title} </Text>
-        <Text style={StyleSheet.subtitle}>{screens[step].subtitle}</Text>
-
-        <View style={styles.btnRow}>
-          {step >  0 && ? (
-            <TouchableOpacity style={StyleSheet.navBtn} onPress={prev}>
-              <Text style={styles.navTxt}>Previous</Text>
-            </TouchableOpacity>
-          ):(
-            <View styles={{width:60}}/>
-          )
-        };
-        {step === screens.length - 1 ? (
-          <TouchableOpacity style={styles.navBtn} onPress={gotoHome}>
-            <Text style={styles.navTxt}>Get Started</Text>
-          </TouchableOpacity>
+      <View style={styles.btnRow}>
+        { step >0 ? (
+                <TouchableOpacity style={styles.navBtn} onPress={prev}>
+                  <Text style={styles.navTxt}> Previous </Text>
+                </TouchableOpacity>
         ):(
-          <TouchableOpacity style={styles.navBtn} onPress={next}>
-            <Text style={styles.navTxt}>Next</Text>
-          </TouchableOpacity>
-        )}  
-          
+          <View style={{ width:60}}  />
+        )
+      } ;
+        {step === screens.length-1 ? (
+            <TouchableOpacity style={styles.getBtn}>
+              <Text style={styles.getTxt}> GetStarted </Text>
+            </TouchableOpacity>
+        ):(
+          <TouchableOpacity style={styles.navBtn}>
+          <Text style={styles.navTxt}> Next </Text>
+        </TouchableOpacity>
+        )}
+
+      </View>
 
 
-        </View>
+    </View>
+
   )
-
-
 }
+
+
+const styles=StyleSheet.create({
+  container:{
+    
+  }
+})
