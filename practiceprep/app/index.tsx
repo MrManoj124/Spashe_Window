@@ -34,19 +34,46 @@ export default function SplashScreen()
     return ()=>clearTimeout(timer);
   },[step]);
 
-  
-}
+  const next()=>step<screens.length - 1 ? setSetp(step+1) : gotoHome();
+  const prev=()=>step>0? && setSetp()step-1);
 
-export default function Index() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
-  );
+  return(
+    <View style={styles.container
+      <TouchableOpacity style={styles.skipBtn}>
+        <Text style={styles.skipText}>Skip</Text>
+        </TouchableOpacity>
+
+        <Lottie animation={screens[step].animation}
+        loop
+        autoPlay
+        style={styles.animation}/>
+
+        <Text style={StyleSheet.title}>{screens[step].title} </Text>
+        <Text style={StyleSheet.subtitle}>{screens[step].subtitle}</Text>
+
+        <View style={styles.btnRow}>
+          {step >  0 && ? (
+            <TouchableOpacity style={StyleSheet.navBtn} onPress={prev}>
+              <Text style={styles.navTxt}>Previous</Text>
+            </TouchableOpacity>
+          ):(
+            <View styles={{width:60}}/>
+          )
+        };
+        {step === screens.length - 1 ? (
+          <TouchableOpacity style={styles.navBtn} onPress={gotoHome}>
+            <Text style={styles.navTxt}>Get Started</Text>
+          </TouchableOpacity>
+        ):(
+          <TouchableOpacity style={styles.navBtn} onPress={next}>
+            <Text style={styles.navTxt}>Next</Text>
+          </TouchableOpacity>
+        )}  
+          
+
+
+        </View>
+  )
+
+
 }
