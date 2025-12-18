@@ -136,6 +136,14 @@ const styles=StyleSheet.create({
     justifyContent:"space-between",
     marginTop:40,
     alignItems:"center",
+  },
+  navBtn:{
+    backgroundColor:"#111",
+    width:65,
+    height:50,
+    borderRadius:25,
+    justifyContent:"center",
+    alignItems:"center",
 
     shadowColor:"#000",
     shadowOpacity:0.2,
