@@ -24,7 +24,7 @@ export default function SplashScreen()
     },
   ];
 
-  const gotoHome=()=>router.replace("/Home");
+  const gotoHome=()=>router.replace("/LoginandRegister/Login");
 
   useEffect(()=>{
     const timer=setTimeout(()=>{
