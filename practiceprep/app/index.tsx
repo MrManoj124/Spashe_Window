@@ -1,11 +1,11 @@
-import { Text, View } from "react-native";
+import {router} from "expo-router";
 import Lottie from "lottie-react-native";
 import {useEffect, useState} from "react";
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
 export default function SplashScreen()
 {
-  const [step, setSetp] = useState(0);
+  const [step, setStep] = useState(0);
   const screens = [
     {
       animation:require("D:\Projectss\ReactNative\SplashWindow\Spashe_Window\practiceprep\assets\images\canvas.json"),
@@ -21,7 +21,7 @@ export default function SplashScreen()
       animation:require("D:\Projectss\ReactNative\SplashWindow\Spashe_Window\practiceprep\assets\images\lottief.json"),
       title:"llm cons",
       subtitle:"This is the third screen of the app"
-    ,
+    },
   ];
 
   const gotoHome=()=>router.replace("/Home");
@@ -54,16 +54,18 @@ export default function SplashScreen()
                 <TouchableOpacity style={styles.navBtn} onPress={prev}>
                   <Text style={styles.navTxt}> Previous </Text>
                 </TouchableOpacity>
+                
         ):(
           <View style={{ width:60}}  />
         )
-      } ;
+      };
+      
         {step === screens.length-1 ? (
             <TouchableOpacity style={styles.getBtn}>
               <Text style={styles.getTxt}> GetStarted </Text>
             </TouchableOpacity>
         ):(
-          <TouchableOpacity style={styles.navBtn}>
+          <TouchableOpacity style={styles.navBtn} onPress={next}>
           <Text style={styles.navTxt}> Next </Text>
         </TouchableOpacity>
         )}
