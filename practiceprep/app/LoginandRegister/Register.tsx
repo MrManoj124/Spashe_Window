@@ -25,7 +25,7 @@ export default function Register(){
             });
 
             alert("Account created successfully!");
-            router.push("/Login");
+            router.push("../LoginandRegister/Login");
         } catch (error:any) {
             console.log(error);
             alert(error.message);
@@ -60,7 +60,7 @@ export default function Register(){
                 <Text style={styles.buttonText}>Create Account</Text>
             </TouchableOpacity>
 
-            <Link href="/Login" style={styles.linkText}>
+            <Link href="../LoginandRegister/Login" style={styles.linkText}>
             Already have an account? Login
             </Link>
         </View>
