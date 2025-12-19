@@ -34,33 +34,33 @@ export default function Register(){
 
     return(
         <View style={styles.container}>
-            <Text style={StyleSheet.title}>Register</Text>
+            <Text style={styles.title}>Register</Text>
             <TextInput 
-            styles={StyleSheet.input}
+            style={styles.input}
             placeholder="Enter Full Name..."
             value={name}
             onChangeText={setName}
             />
             <TextInput 
-            styles={StyleSheet.input}
+            style={styles.input}
             placeholder="Enter your Email Address..."
             value={email}
             onChangeText={setEmail}
             keyboardType="email-address"
             />
             <TextInput 
-            styles={StyleSheet.input}
+            style={styles.input}
             placeholder="Enter the Password..."
             value={password}
             onChangeText={setPassword}
             secureTextEntry
             />
 
-            <TouchableOpacity style={StyleSheet.button}onPress={handleRegister}>
-                <Text style={StyleSheet.buttonText}>Create Account</Text>
+            <TouchableOpacity style={styles.button}onPress={handleRegister}>
+                <Text style={styles.buttonText}>Create Account</Text>
             </TouchableOpacity>
 
-            <Link href="/Login" style={StyleSheet.linkText}>
+            <Link href="/Login" style={styles.linkText}>
             Already have an account? Login
             </Link>
         </View>
