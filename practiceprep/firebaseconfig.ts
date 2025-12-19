@@ -4,13 +4,23 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAF3djYVjF49bD6QHsAkrwXHEVKP5dRb94",
-  authDomain: "unimate-74.firebaseapp.com",
-  projectId: "unimate-74",
-  storageBucket: "unimate-74.appspot.com",
-  messagingSenderId: "27455709747",
-  appId: "1:27455709747:web:15e355452716fbc7b27946",
+
+  apiKey: "AIzaSyCd6lpdbWXcOXvugpSUxkgmgM4OW2718yc",
+
+  authDomain: "splashmovieapp.firebaseapp.com",
+
+  projectId: "splashmovieapp",
+
+  storageBucket: "splashmovieapp.firebasestorage.app",
+
+  messagingSenderId: "607193225650",
+
+  appId: "1:607193225650:web:ab70c93b384b08981aecab",
+
+  measurementId: "G-5NEY21QS0R"
+
 };
+
 
 const app = initializeApp(firebaseConfig);
 

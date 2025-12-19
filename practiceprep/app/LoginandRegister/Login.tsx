@@ -38,7 +38,7 @@ export default function Login(){
                 <Text style={styles.buttonText}>Login</Text>
             </TouchableOpacity>
 
-            <Link href="/Home" style={styles.linkText}>
+            <Link href="../LoginandRegister/Register" style={styles.linkText}>
                 Don't have an account? Register here.
             </Link>
 
